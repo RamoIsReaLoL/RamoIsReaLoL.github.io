@@ -89,7 +89,7 @@ function update_presence() {
           <div class="p-3 flex space-x-2 items-center overflow-hidden">
               <img src="/assets/img/spotify.png" alt="IMG" class="rounded-xl"
                   width="50" height="50">
-              <p class="normalText ml-3 opacity-90">Spotify<br><span class="smallText opacity-80">${song || "<i>No data</i>"}</span></p>
+              <p class="normalText ml-3 opacity-90">Spotify<br><span class="smallText opacity-80">${artist} - ${song || "<i>No data</i>"}</span></p>
               <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">left ${spotify_time || "0m 0s"}</p>
           </div>
       </div>
