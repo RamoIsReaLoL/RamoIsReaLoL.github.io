@@ -58,7 +58,7 @@ function update_presence() {
                  <img src="https://cdn.discordapp.com/avatars/881986210191523920/a_fb93e962113018299075ff4b5668f792.png?size=1024" alt="IMG" class="rounded-xl"
                      width="50" height="50">
                  <p class="normalText ml-3 opacity-90">Disney+<br><span class="smallText opacity-80">${RamoIsReaLoLActivity.details}</span></p>
-                 <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">${new Date(api.d.timestamps.start).getTime();}</p>
+                 <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">${new Date(api.d.timestamps.start).getTime();</p>
             </div>
        </div>
        </a>`;
