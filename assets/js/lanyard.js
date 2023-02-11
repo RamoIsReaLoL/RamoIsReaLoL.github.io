@@ -2,6 +2,7 @@ var statusIcon = document.getElementById("statusIcon");
 var discordStatus = document.getElementById("discordStatus");
 var spotifyListening = document.getElementById("spotifyListening");
 var visualStudioCodePlaying = document.getElementById("visualStudioCodePlaying");
+var RamoIsReaLoL = document.getElementById("RamoIsReaLoL");
 var activitiesStatus = document.getElementById("activitiesStatus");
 var Status = document.getElementById("Status");
 
@@ -44,6 +45,27 @@ function update_presence() {
   if (statusIcon != null) {
     update_status(api.d.discord_status);
   }
+
+  var RamoIsReaLoLAppID = "1019290522369671209"
+  
+  var RamoIsReaLoLActivity = api.d.activities.find(activity => activity.application_id == RamoIsReaLoLAppID)
+  
+    if (RamoIsReaLoLActivity) {
+    RamoIsReaLoL.innerHTML = `
+        <a href="javascript:void(0)">
+        <div class="card rounded-xl h-full">
+            <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                 <img src="/assets/img/disneyPlus.png" alt="IMG" class="rounded-xl"
+                     width="50" height="50">
+                 <p class="normalText ml-3 opacity-90">Disney+<br><span class="smallText opacity-80">${disneyPlusActivity.details || "<i>No data</i>"}</span></p>
+                 <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">${disneyPlusActivity.state || "<i>No data</i>"}</p>
+            </div>
+       </div>
+       </a>`;
+     } else {
+       RamoIsReaLoL.innerHTML = ``;
+       document.getElementById("RamoIsReaLoL").style.display = "none";
+     }
 
   var vsCodeAppID = "782685898163617802"
                     
