@@ -141,7 +141,7 @@ function update_presence() {
   }
 
   setInterval(function () {
-    if (api.d.listening_to_spotify == false && api.d.activities.find(activity => activity.application_id == vsCodeAppID) == undefined) {
+    if (api.d.listening_to_spotify == false && api.d.activities.find(activity => activity.application_id == vsCodeAppID) == undefined && api.d.activities.find(activity => activity.application_id == RamoIsReaLoLAppID) == undefined) {
       activitiesStatus.innerHTML = `<i class="smallText opacity-80">Bir Aktivite Bulunamadı</i>`;
     } else {
       activitiesStatus.innerHTML = ``;
